@@ -1,0 +1,694 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 10px; /* Ensure there's no extra margin */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #f4f4f4;
+}
+
+/* Basic Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #79CFBF, #4A8A76);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Basic Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1.5px;
+    transition: transform 0.3s ease;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo:hover h4 {
+    transform: scale(1.1);
+}
+
+/* New Navigation Style */
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centered navigation items */
+    gap: 40px; /* Increased space between items */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+    color: #4A8A76;
+    background-color: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover::after {
+    width: 60%;
+}
+
+/* New User Cart Section */
+.user-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-cart .icon {
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.user-cart .icon:hover {
+    transform: scale(1.15) rotate(7deg);
+    filter: brightness(1) invert(0.2);
+}
+
+/*----------------------------------- Banner Section ---------------------------------*/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(99, 57, 57, 0.7);
+}
+
+.banner-text h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.banner-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-text button {
+    padding: 10px 20px;
+    background-color: #4A8A76;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.banner-text button:hover {
+    background-color: #367b58;
+}
+
+/*----------------------------------- Soap Feature Section ---------------------------*/
+.soap-feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensure items are aligned at the top */
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    background-color: #fff;
+    gap: 30px;
+    width: 100%;
+}
+
+.soap-content {
+    flex: 1 1 400px; /* Allow text section to grow and shrink */
+    text-align: left;
+    padding: 20px;
+    margin-left: 100px;
+    max-width: 600px; /* Limit max width to prevent it from becoming too wide */
+}
+
+.soap-content h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #4A8A76;
+    margin-bottom: 20px;
+}
+
+.soap-content p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.soap-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.soap-content ul li {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.soap-image {
+    flex: 1 1 400px; /* Allow this section to grow and shrink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.soap-image img {
+    width: 100%; /* Make sure the image takes full width of its container */
+    max-width: 500px; /* Limit max width of the image */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/*----------------------------------- Features Section -----------------------------*/
+.features {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.feature-heading h2 {
+    text-align: center;
+    margin: 30px;
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    text-align: center;
+}
+
+.feature img {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/*----------------------------------- Products Section ----------------------------*/
+.products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.product a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures the link inherits the parent element's color */
+}
+
+
+.products h2 {
+    font-family: 'Syne Mono', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.products .product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products .product {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.products .product:hover {
+    transform: scale(1.05);
+}
+
+.products .product img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.products .product h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.products .product p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.products .product button {
+    background-color: #555;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.products .product button:hover {
+    background-color: #333;
+}
+
+/*----------------------------------- Footer Section -----------------------------*/
+.footer {
+    background: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer .info div {
+    margin: 10px;
+    width: 30%;
+}
+
+.footer .info div p {
+    margin: 5px 0;
+}
+
+.footer .social img {
+    margin: 5px;
+    width: 40px;
+}
+
+.footer .certifications img {
+    width: 50px;
+    margin: 10px;
+}
+
+.footer p {
+    margin-top: 10px;
+}
+
+.footer .social img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
+
+/*------------------ Media Queries for Responsive Design ------------------*/
+
+/* Universal Reset for Flex Layouts */
+.header, .user-cart, .soap-feature, .products .product-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    .header h4 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .banner-text h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .banner-text p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .soap-feature {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .soap-content {
+        margin-left: 0;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .soap-image img {
+        max-width: 100%;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+    }
+
+    .feature-item {
+        width: 30%;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .product {
+        width: 48%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer .info div {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .footer .social img {
+        width: 40px;
+        margin: 10px;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .header, .user-cart {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo h4 {
+        font-size: 1.4rem;
+        
+    }
+
+    .banner-text h1 
+    {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .banner-text p 
+    {
+        font-size: 12px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .soap-feature {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .soap-content {
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .soap-image img {
+        max-width: 100%;
+        align-items: center;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+
+    .soap-highlights ul li a
+    {
+        text-align: center;
+    }
+
+    .products .product {
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 20px;
+    }
+
+    .footer .info div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer .social img {
+        width: 35px;
+        margin: 5px;
+    }
+
+    .feature-item {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .logo h4 {
+        font-size: 1.2rem;
+        margin-top: 5px;
+    }
+
+    .banner-text h1 {
+        font-size: 18px;
+    }
+
+    .banner-text p {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+
+    .soap-content h2 {
+        font-size: 20px;
+    }
+
+    .soap-content p {
+        font-size: 14px;
+    }
+
+    .products .product-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer .info div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+
+    .footer .social img {
+        width: 25px;
+        margin: 5px;
+    }
+}
+
+/* Extra Small Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .header {
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 45px;
+    }
+
+    .logo h4 {
+        font-size: 1.1rem;
+    }
+
+    .banner-text h1 {
+        font-size: 16px;
+    }
+
+    .banner-text p {
+        font-size: 8px;
+    }
+
+    .soap-content h2 {
+        font-size: 18px;
+    }
+
+    .soap-content p {
+        font-size: 12px;
+    }
+
+    .products .product-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .footer .info div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+    }
+
+    .footer .social img {
+        width: 20px;
+        margin: 5px;
+    }
+}

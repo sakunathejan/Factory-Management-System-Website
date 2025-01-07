@@ -1,0 +1,52 @@
+/* Hide default cursor */
+body {
+    cursor: none; /* Hides the default cursor */
+}
+
+/* Soap cursor shape */
+.soap-cursor {
+    width: 60px; /* Adjust the width of the soap */
+    height: 30px; /* Adjust the height of the soap */
+    background-color: #C0C0C0; /* Light grey color to resemble soap */
+    border-radius: 15px; /* Rounded corners for the soap shape */
+    position: absolute;
+    pointer-events: none; /* Ensures the soap cursor doesn't interact with elements */
+    transform: translate(-50%, -50%); /* Centers the soap cursor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow for realism */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Bubble effect when hovering */
+@keyframes bubble {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.soap-bubble {
+    position: absolute;
+    width: 10px; /* Initial bubble size */
+    height: 10px; /* Initial bubble size */
+    background-color: rgba(173, 216, 230, 0.8); /* Light bubble color */
+    border-radius: 50%; /* Circular shape */
+    animation: bubble 1.5s linear infinite; /* Bubble animation */
+    pointer-events: none; /* Ensures the bubble doesn't interfere with other elements */
+    transform: translate(-50%, -50%); /* Centers the bubble */
+}
+
+/* Make the soap cursor follow the mouse position */
+body {
+    position: relative;
+}
+
+body:hover .soap-cursor {
+    display: block;
+}
+
+
+

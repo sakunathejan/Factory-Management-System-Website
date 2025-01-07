@@ -1,0 +1,260 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/Company Logo/Images for the Web/cotton.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    opacity: 15; /* Control the darkness of the background */
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(36, 36, 36, 0.4); /* Dark overlay */
+    z-index: -1; /* Overlay on top of the image but behind other content */
+}
+
+/* Basic Logo Section */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo-container img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff7f7;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover h4 {
+    transform: scale(1.1);
+}
+
+/* Form container */
+.form-container {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form title */
+.form-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4f46e5;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+/* Labels */
+.label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+/* Input, Textarea, Select */
+.input, .input-textarea, .select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input:focus, .input-textarea:focus, .select:focus {
+    border-color: #4f46e5;
+}
+
+/* Rating stars */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.9rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #d1d5db;
+    transition: color 0.3s ease;
+}
+
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label {
+    color: #fbbf24;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #fbbf24;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.submit-btn:hover {
+    background-color: #4338ca;
+}
+
+/* General styling for Thank You Popup */
+.thank-you-message {
+    display: none;
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 999;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Smooth fade and scale animation for popup */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Show the popup with smooth transition */
+.thank-you-message.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Popup message title and text */
+.thank-you-message h2 {
+    color: #4CAF50;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Popup message paragraph */
+.thank-you-message p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Close button style */
+.thank-you-message .close-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.thank-you-message .close-btn:hover {
+    background-color: #45a049;
+}
+
+/* Hide sections initially */
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

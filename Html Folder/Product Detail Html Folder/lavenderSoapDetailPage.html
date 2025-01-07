@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="/css_Folder/Product Detail Css Folder/lavenderSoapDetailPage.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/Html Folder/HomePage.html" title="Home Page">
+                <img src="/Company Logo/CompanyLogo.png" alt="Logo">
+            </a>
+            <h4>SAKURAA PRODUCTS</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/Html Folder/HomePage.html" title="Home">Home</a></li>
+                <li><a href="/Html Folder/productsPage.html" title="Products">Products</a></li>
+                <li><a href="/Html Folder/aboutPage.html" title="About">About</a></li>
+                <li><a href="/Html Folder/feedbackPage.html" title="Feedback">Feedback</a></li>
+                <li><a href="/Html Folder/history.html" title="History">History</a></li>
+            </ul>
+        </nav>
+        <div class="user-cart">
+            <a href="/Html Folder/AdminPanel.html" title="My Account">
+                <img src="/Company Logo/Images for the Web/user.png" alt="User" class="icon">
+            </a>
+            <a href="/cart" title="Cart">
+                <img src="/Company Logo/Images for the Web/cart.png" alt="Cart" class="icon">
+            </a>
+        </div>
+    </header>
+
+    <div class="product-container">
+        <!-- Main Product Section -->
+        <div class="main-product">
+            <!-- Left Column: Product Images -->
+            <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="/Company Logo/Images for the Web/lavender.jpg" alt="Main product image" class="w-full h-auto">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="/Company Logo/Images for the Web/lavender2.avif" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this)">
+                        <img src="/Company Logo/Images for the Web/lavender3.webp" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="/Company Logo/Images for the Web/lavender.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+                        <img src="/Company Logo/Images for the Web/lavender2.avif" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+
+                    <!-- Similar Items Section -->
+                <div class="similar-items">
+                    <h2 class="text-xl font-bold">Similar Items</h2>
+                    <div class="similer-items-grid">
+                        <!-- Similar Item 1 -->
+                        <div class="similar-item">
+                            <img src="/Company Logo/Images for the Web/roseBlossom.jpg" alt="Rose Blossom" class="soap-rose">
+                            <p class="rose-text">Rose Blossom</p>
+                            <p class="rose-text">New</p>
+                            <p class="rose-text">Rs : 950.00</p>
+                            <p class="rose-text">+ shipping</p>
+                            <p class="rose-text">17 watchers</p>
+                        </div>
+
+                        <!-- Similar Item 2 -->
+                        <div class="similar-item">
+                            <img src="/Company Logo/Images for the Web/cocnutSoap.jpg">
+                            <p class="coconut-text">Coconut Breeze</p>
+                            <p class="coconut-text">New</p>
+                            <p class="coconut-text">Rs. 850.00</p>
+                            <p class="coconut-text">Free shipping</p>
+                        </div>
+
+                        <!-- Similar Item 3 -->
+                        <div class="similar-item">
+                            <img src="/Company Logo/Images for the Web/honey-hibiscus-soap.jpg" alt="hibiscus-soap" class="hibiscus-soap">
+                            <p class="hibiscus-title">Honey Hibiscus Bathing Bar</p>
+                            <p class="hibiscus-text">New</p>
+                            <p class="hibiscus-text">Rs. 700.00</p>
+                            <p class="hibiscus-text">+ shipping</p>
+                            <p class="hibiscus-text">10 watchers</p>
+                        </div>
+
+                        <!-- Similar Item 4 -->
+                        <div class="similar-item">
+                            <img src="/Company Logo/Images for the Web/sour-soap.jpg" alt="sour-spice-soap" class="sour-spice-soap">
+                            <p class="sour-title">Sour Spice Tango Bathing Bar</p>
+                            <p class="sour-text">New</p>
+                            <p class="sour-text">Rs. 750.00</p>
+                            <p class="sour-text">Free shipping</p>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>            
+
+            <!-- Right Column: Product Details -->
+            <div class="product-details">
+
+                <!-- Product Description -->
+                <div class="soap-description">
+                    <h3 class="section-title">Lavender Bliss Soap</h3>
+                    <p class="soap-para">
+                        Indulge in the calming, aromatic experience of Lavender Bliss Soap, a luxurious handmade soap
+                        designed to nourish both your skin and senses. Infused with premium, all-natural lavender essential oil,
+                        this soap provides a soothing fragrance that helps reduce stress and anxiety. The gentle, effective
+                        cleansing formula is enriched with shea butter, known for its hydrating properties. Lavender Bliss Soap
+                        lathers smoothly, leaving your skin feeling refreshed and beautifully scented. Perfect for sensitive
+                        skin, free from harsh chemicals, and eco-friendly.
+                    </p>
+                </div>
+
+                <div class="product-price">
+                    <span class="text-product-price">Rs. 900.00</span>
+                    <span class="text-product-price">(Approximately US $3.07)</span>
+                </div>
+
+                <!-- Quantity Selector -->
+                <div class="quantity-selector">
+                    <label for="quantity" class="quantity-text">Quantity:</label>
+                    <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="100" step="1" oninput="validateQuantity(this)" />
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="buy-now-btn">Buy It Now</button>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <button class="add-to-watchlist-btn">Add to Watchlist</button>
+                </div>
+
+                <div class="info-container">
+                    <!-- Popularity Information -->
+                    <div class="popularity-info">
+                        <p class="text-gray-600">Popular item. 9 Sakura soap bars have already been sold today.</p>
+                        <p class="text-gray-600">People are checking this out. 5 customers have added Sakura soap to their wishlist.</p>
+                    </div>
+                
+                    <!-- Shipping Information -->
+                    <div class="shipping-info">
+                        <p class="text-gray-600">Shipping:</p>
+                        <p class="text-gray-800">Shipping to Sri Lanka: LKR 200 (approx USD $1.00) via LankaPost. <a href="#" class="text-blue-600">See details</a></p>
+                        <p class="text-gray-600">Located in Colombo, Sri Lanka</p>
+                    </div>
+                
+                    <!-- Delivery Information -->
+                    <div class="delivery-info">
+                        <p class="text-gray-600">Delivery:</p>
+                        <p class="text-gray-800">Estimated delivery between Wed, Jan 24 and Fri, Feb 21 to Colombo.</p>
+                        <p class="text-gray-600">Please note: Delivery times may vary depending on local postal services.</p>
+                    </div>
+                
+                    <!-- Returns Policy -->
+                    <div class="returns-policy">
+                        <p class="text-gray-600">Returns:</p>
+                        <p class="text-gray-800">30-day returns policy. The buyer is responsible for return shipping. <a href="#" class="text-blue-600">See details</a></p>
+                    </div>
+                
+                    <!-- Payment Options -->
+                    <div class="payment-options">
+                        <h3 class="section-title">Accepted Payments</h3>
+                        <div class="payment-icons">
+                            <img src="/Company Logo/Images for the Web/paypal.webp" alt="PayPal" class="payment-icon" />
+                            <img src="/Company Logo/Images for the Web/visa.png" alt="Visa" class="payment-icon" />
+                            <img src="/Company Logo/Images for the Web/mastercard.webp" alt="MasterCard" class="payment-icon" />
+                        </div>
+                    </div>
+                
+                    <!-- Guarantee Section -->
+                    <div class="guarantee-info">
+                        <h3 class="section-title">Shop with Confidence</h3>
+                        <div class="guarantee-details">
+                            <p class="guarantee-text">Top-rated seller with fast shipping and free returns.</p>
+                            <p class="guarantee-text">Sakuraa Product Money Back Guarantee</p>
+                            <p class="guarantee-text">
+                                Get the item you ordered or your money back.
+                                <a href="#" class="text-blue-600">Learn more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>>
+
+    <footer class="footer">
+        <div class="info">
+            <div>
+                <p><strong>Contact:</strong></p>
+                <p>Email: sakupro2023@gmail.com</p>
+                <p>Phone: 038228205</p>
+            </div>
+            <div>
+                <p><strong>Address:</strong></p>
+                <p>No 117 , Suramaya , Bopatta , Urapola.</p>
+            </div>
+            <div class="social">
+                <p><strong>Follow Us:</strong></p>
+                <img src="/Company Logo/Images for the Web/facebook.png">
+                <img src="/Company Logo/Images for the Web/instagram.png">
+            </div>
+            <div class="certifications">
+                <p><strong>Certifications:</strong></p>
+                <img alt="FDA logo" src="/Company Logo/Images for the Web/gmp_ceylonsoap.png" />
+                <img alt="Organic Certified logo" src="/Company Logo/Images for the Web/eco_friendly_packaging.png" />
+            </div>
+        </div>
+        <p>© 2024 Sakuraa Products. All rights reserved.</p>
+    </footer>
+
+    <script src="/JavaScript Folder/Product Detail Js Folder/lavenderSoapDetailPage.js"></script>
+</body>
+
+</html>

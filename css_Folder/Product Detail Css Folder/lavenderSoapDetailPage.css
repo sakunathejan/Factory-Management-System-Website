@@ -1,0 +1,563 @@
+/* Reset some basic styles */
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 10px; /* Ensure there's no extra margin */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #f4f4f4;
+    
+}
+
+/* Basic Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #79CFBF, #4A8A76);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Basic Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1.5px;
+    transition: transform 0.3s ease;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo:hover h4 {
+    transform: scale(1.1);
+}
+
+/* New Navigation Style */
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centered navigation items */
+    gap: 40px; /* Increased space between items */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+    color: #4A8A76;
+    background-color: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover::after {
+    width: 60%;
+}
+
+/* New User Cart Section */
+.user-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-cart .icon {
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.user-cart .icon:hover {
+    transform: scale(1.15) rotate(7deg);
+    filter: brightness(1) invert(0.2);
+}
+
+/* Product container */
+.product-container {
+    max-width: 1300px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 40px 20px; /* Added extra padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    min-height: 800px; /* Increase the height of the container */    
+    
+}
+
+.product-container .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.main-product {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; /* Align content from the top */
+    
+}
+.product-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image {
+    width: 580.013px; /* Fixed width */
+    height: 700.925px; /* Fixed height */
+    overflow: hidden; /* Hide overflow to keep the image inside the container */
+    position: relative;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+.main-image img {
+    width: 100%; /* Make the image fill the width of the container */
+    height: 100%; /* Make the image fill the height of the container */
+    object-fit: contain; /* This ensures the image scales while keeping its aspect ratio */
+    border-radius: 8px;
+}
+
+.product-images .main-image img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* This ensures the image covers the container and doesn't stretch */
+    border-radius: 8px;
+}
+
+
+.product-images .main-image img {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* This ensures the image covers the container and doesn't stretch */
+    border-radius: 8px;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail-images img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.thumbnail-images img:hover {
+    border-color: #1abc9c;
+}
+.product-images .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.product-images .thumbnail-images {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.product-images .thumbnail-images img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.product-images .thumbnail-images img:hover {
+    border-color: #1abc9c;
+}
+
+.product-details {
+    flex: 1;
+    width: 580px;
+    
+}
+
+.product-details .product-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-details .brand-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.product-details .brand-info a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.product-details .product-price {
+    font-size: 28px;
+    color: #2ecc71;
+    margin: 20px 0;
+}
+
+.product-details .product-condition {
+    font-size: 16px;
+}
+
+.product-controls
+{
+    width: 580px;
+}
+
+.soap-description {
+    
+    margin-bottom: 0px; /* Add margin to space out from the similar products */
+    padding: 10px 15px; /* Ensure there's some internal padding for readability */
+    background-color: #eeebeb; /* Optional: light background to distinguish it */
+    border-radius: 8px; /* Optional: rounded corners for visual appeal */
+    position: relative;
+    width: 600px;
+    top: 10px;
+}
+
+.soap-description p {
+    font-size: 14px; /* Adjust the font size for readability */
+    line-height: 1.6; /* Ensure the text doesn't appear too tight */
+    color: #333; /* Ensure the text color is readable */
+}
+
+
+
+/* Quantity Selector Container */
+.quantity-selector {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 603px;
+    margin-bottom: 10px;
+    bottom: 500px;
+}
+
+/* Quantity Label */
+.quantity-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Quantity Input Field */
+.quantity-input {
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused Input Styling */
+.quantity-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;    
+    width: 630px;
+    bottom: 900px;
+}
+
+.action-buttons button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover and click effects */
+}
+
+.action-buttons button:hover {
+    background-color: #4DA1A9;  /* Change background color on hover */
+    color: white;               /* Change text color on hover */
+    transform: scale(1.05);     /* Slightly enlarge the button */
+}
+
+.action-buttons button:active {
+    transform: scale(0.95);     /* Slightly shrink the button on click */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow effect on click */
+}
+
+.buy-now-btn {
+    background-color: #79D7BE;
+    color: white;
+}
+
+.add-to-cart-btn {
+    background-color: #88f6a9;
+    color: white;
+}
+
+.add-to-watchlist-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Container for all sections */
+.info-container {
+    width: 580px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center-align container */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between each section */
+    font-size: 14px;
+    color: #555;
+    background-color: #ffffff; /* White background for each section */
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(165, 164, 164, 0.481);
+    
+}
+
+/* Payment Options Section */
+.payment-options {
+    text-align: center;
+}
+
+.payment-options .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.payment-icons img {
+    width: 50px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Guarantee Information Section */
+.guarantee-info .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.guarantee-details {
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.guarantee-text {
+    margin-bottom: 10px;
+}
+
+.guarantee-info a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.guarantee-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* Optional: You can also modify the other sections like shipping-info, delivery-info, returns-policy etc. for further customization if needed */
+
+
+.additional-features {
+    width: 580px;
+   
+}
+
+
+.similar-items {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-between; /* Add equal spacing between items */
+    align-items: stretch; /* Ensure items have the same height */
+    gap: 20px; /* Add spacing between items */
+    width: 630px; /* Ensure the container spans full width */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.similar-items .similer-items-grid {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted min-width for the grid items */
+    gap: 20px; /* Slightly reduced gap between items */
+}
+
+.similar-item {
+    flex: 1 1 calc(25% - 20px); /* Equal size, with a base size of 25% of the row minus the gap */
+    max-width: calc(25% - 20px); /* Ensure the maximum width matches the flex basis */
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.similar-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.similar-item p {
+    margin: 12px 0; /* Reduced margin */
+    font-size: 14px; /* Reduced font size */
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the .similar-item */
+.similar-item:hover {
+    transform: translateY(-8px) scale(1.05); /* Pop effect - lifts and scales */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    border-color: #3498db; /* Blue border */
+    background-color: #f0f4f8; /* Light background color change */
+}
+
+.similar-item:hover img {
+    transform: scale(1.1); /* Slight zoom effect on image */
+    opacity: 0.9; /* Slight fade on image */
+}
+
+/* Fade-in effect for similar items */
+.similar-item {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.similar-item.visible {
+    opacity: 1;
+}
+
+
+/*----------------------------------- Footer Section -----------------------------*/
+.footer {
+    background: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer .info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer .info div {
+    margin: 10px;
+    width: 30%;
+}
+
+.footer .info div p {
+    margin: 5px 0;
+}
+
+.footer .social img {
+    margin: 5px;
+    width: 40px;
+}
+
+.footer .certifications img {
+    width: 50px;
+    margin: 10px;
+}
+
+.footer p {
+    margin-top: 10px;
+}
+
+.footer .social img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
+
+

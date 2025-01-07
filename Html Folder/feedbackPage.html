@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Feedback Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css_Folder/feedbackPage.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <a href="/Html Folder/HomePage.html" title="Home Page">
+                <img src="/Company Logo/CompanyLogo.png" alt="Logo" />
+            </a>
+            <h4>SAKURAA PRODUCTS</h4>
+        </div>
+        <div class="form-container">
+            <h1 class="form-title">We Value Your Feedback</h1>
+            <form id="feedback-form" class="form" method="POST">
+                <div class="input-group">
+                    <label class="label" for="name">Name</label>
+                    <input class="input" id="name" name="name" placeholder="Your Name" type="text" required/>
+                </div>
+                <div class="input-group">
+                    <label class="label" for="email">Email</label>
+                    <input class="input" id="email" name="email" placeholder="Your Email" type="email" required/>
+                </div>
+                <div class="input-group">
+                    <label class="label" for="feedback-type">Feedback Type</label>
+                    <select class="input" id="feedback-type" name="feedback-type" required>
+                        <option disabled selected value="">- Select a Feedback Type -</option>
+                        <option value="customer">Customer Feedback</option>
+                        <option value="employee">Employee Feedback</option>
+                        <option value="ux">User Experience (UX) Feedback</option>
+                        <option value="product">Product Feedback</option>
+                        <option value="survey">Survey-Style Feedback</option>
+                        <option value="event">Event Feedback</option>
+                        <option value="testimonial">Testimonial or Review</option>
+                        <option value="complaint">Complaint/Issue Feedback</option>
+                        <option value="educational">Educational Feedback</option>
+                        <option value="website">Website Performance Feedback</option>
+                        <option value="service">Service Satisfaction Feedback</option>
+                    </select>
+                </div>
+                <div class="hidden" id="rating-section">
+                    <label class="label" for="rating">Rating</label>
+                    <div class="rating">
+                        <input id="rating1" name="rating" type="radio" value="1" />
+                        <label class="fa fa-star" for="rating1"></label>
+                        <input id="rating2" name="rating" type="radio" value="2" />
+                        <label class="fa fa-star" for="rating2"></label>
+                        <input id="rating3" name="rating" type="radio" value="3" />
+                        <label class="fa fa-star" for="rating3"></label>
+                        <input id="rating4" name="rating" type="radio" value="4" />
+                        <label class="fa fa-star" for="rating4"></label>
+                        <input id="rating5" name="rating" type="radio" value="5" />
+                        <label class="fa fa-star" for="rating5"></label>
+                    </div>
+                </div>
+                <div class="hidden" id="comments-section">
+                    <label class="label" for="comments">Comments</label>
+                    <textarea class="input-textarea" id="comments" name="comments" placeholder="Your Comments" rows="4"></textarea>
+                </div>
+                <div class="hidden" id="additional-questions">
+                    <label class="label" for="additional">Additional Questions</label>
+                    <textarea class="input-textarea" id="additional" name="additional" placeholder="Your Answers" rows="4"></textarea>
+                </div>
+                <div class="form-submit">
+                    <button class="submit-btn" type="submit">Submit Feedback</button>
+                </div>
+            </form>
+
+            <!-- Thank You Message (hidden initially) -->
+            <div id="thank-you-message" class="thank-you-message hidden">
+                <h2>Thank you for your feedback!</h2>
+                <p>Your response has been recorded. You will be redirected shortly.</p>
+            </div>
+        </div>
+    </div>
+    <script src="/JavaScript Folder/feedbackPage.js"></script>
+</body>
+</html>
