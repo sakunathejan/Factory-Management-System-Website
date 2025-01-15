@@ -1,0 +1,604 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Tailwind', sans-serif;
+    background-image: url('/Company Logo/Images for the Web/clouds.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-box {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    overflow: hidden;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin-left: 2px;
+    position: relative; /* Add this line to position the back arrow correctly */
+}
+/* Form Section Styling */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.form-section h2 {
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 20px;
+}
+
+/* Logo and Title Section */
+.logo-section {
+    position: absolute;
+    top: 20px; /* Adjust the distance from the top */
+    left: 20px; /* Adjust the distance from the left */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Space between logo, title, heading, and description */
+    z-index: 20; /* Ensure it stays above other elements */
+}
+
+/* Logo Styling */
+.logo {
+    width: 50px; /* Adjust logo size */
+    height: 50px; /* Maintain aspect ratio */
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    font-size: 15px; /* Adjust size */
+    font-weight: bold; /* Ensure it's bold */
+    color: #333; /* Text color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Heading Styling */
+.heading {
+    font-size: 30px; /* Adjust heading size */
+    font-weight: bold; /* Ensure it's bold */
+    color: #2c2c2c; /* Text color */
+    margin: 0; /* Remove default margin */
+    position: relative;
+    margin-top: 5px; /* Slight space from the top */
+}
+
+/* Description Styling */
+.description {
+    font-size: 15px; /* Adjust description size */
+    color: #777; /* Text color */
+    margin: 0; /* Remove default margin */
+    max-width: 300px; /* Optional: Limit the width for better readability */
+    position: relative;
+    margin-top: 0px; /* No space between heading and description */
+}
+
+
+
+/* Forgot Password and New Customer Links */
+.forgot-password,
+.new-customer a {
+    text-decoration: none; /* Force removal of underline */
+    color: #009990;
+}
+
+.forgot-password a:hover,
+.new-customer a:hover {
+    text-decoration: none !important; /* Ensure underline doesn't appear on hover */
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    outline: 2px solid #79D7BE; /* Set a custom outline on focus */
+    border-color: #79D7BE;
+    box-shadow: #79D7BE; /* Disable box-shadow if not needed */
+}
+
+.login-button {
+    width: 100%;
+    background-color: #79cfbf;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #4DA1A9;
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Media Queries */
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .login-box {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .form-section,
+    .image-section {
+        width: 100%;
+        flex: none;
+    }
+
+    .form-section {
+        padding: 10px;
+    }
+
+    .form-section form {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .forgot-password,
+    .new-customer,
+    .terms {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 8px; /* Set smallest font size for extra small devices */
+    }
+
+    .image-section img {
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    .image-section {
+        display: none; /* Hide image section */
+    }
+
+    .back-arrow {
+        display: none; /* Hide back arrow */
+    }
+
+    .logo-section {
+        position: static; /* Adjust for mobile */
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .heading {
+        font-size: 24px;
+        bottom: auto;
+        right: auto;
+        position: static;
+    }
+
+    .description {
+        font-size: 13px;
+        bottom: auto;
+        right: auto;
+        position: static;
+        max-width: 100%;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .login-box {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .form-section {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form-section h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .form-section form {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .forgot-password,
+    .new-customer,
+    .terms {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 8px; /* Set smallest font size for extra small devices */
+    }
+
+    .input-group {
+        margin-bottom: 10px;
+    }
+
+    .input-group input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .login-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .back-arrow {
+        display: none;
+    }
+
+    .logo-section {
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .form-section h2 {
+        font-size: 16px;
+    }
+
+    .form-section form {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .forgot-password,
+    .new-customer,
+    .terms {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 8px; /* Set smallest font size for extra small devices */
+    }
+
+    .input-group input {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .login-button {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .title {
+        font-size: 11px;
+    }
+
+    .heading {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 10px;
+    }
+}
+
+/* Extra Large Devices (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 40px;
+    }
+
+    .login-box {
+        max-width: 1100px;
+        padding: 40px;
+    }
+
+    .form-section {
+        padding: 30px;
+    }
+
+    .forgot-password,
+    .new-customer,
+    .terms {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 8px; /* Set smallest font size for extra small devices */
+    }
+
+    .form-section p {
+        margin-top: 2px;
+        margin-bottom: 60px;
+    }
+
+    .form-section h2 {
+        margin-bottom: 10px;
+    }
+
+    .logo-section {
+        text-align: left;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .input-group input {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .login-button {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .image-section img {
+        max-width: 600px;
+    }
+}
+
+/* Extra Large Devices (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 40px;
+        display: flex;
+        justify-content: center; /* Center align the container */
+        margin-top: 20px;
+    }
+
+    .login-box {
+        max-width: 1100px;
+        padding: 40px;
+        display: flex;
+        justify-content: space-between; /* Spread out the form and image sections */
+        position: relative;
+        gap: 20px; /* Space between form and image */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    .back-arrow {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+    }
+
+    .back-arrow img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    .form-section {
+        padding: 20px;
+        flex: 1;
+        min-width: 300px; /* Ensure the form section has a minimum width */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .forgot-password,
+    .new-customer,
+    .terms {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px; /* Set readable font size */
+    }
+
+    .form-section p {
+        margin-top: 10px;
+        margin-bottom: 20px; /* Adjust space between text and the next element */
+    }
+
+    .form-section h2 {
+        font-size: 24px; /* Heading size optimized for 1024px screens */
+        margin-bottom: 15px;
+    }
+
+    .logo-section {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 15px; /* Add space under logo */
+    }
+
+    .logo {
+        width: 60px; /* Logo size optimized */
+        height: 60px;
+    }
+
+    .title {
+        font-size: 16px; /* Larger font size */
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
+
+    .heading {
+        font-size: 30px;
+        margin-top: 5px; /* Small space from the top */
+        margin-bottom: 5px; /* Reduce space between heading and description */
+        margin-top: 90px;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #777;
+        margin: 0;
+    }
+
+    .input-group input {
+        padding: 15px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 15px; /* Space between inputs */
+    }
+
+    .login-button {
+        width: 100%;
+        background-color: #79cfbf;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+       
+    }
+
+    .login-button:hover {
+        background-color: #4DA1A9;
+    }
+
+    .footer {
+        font-size: 16px;
+        color: #666;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .image-section img {
+        max-width: 600px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
