@@ -127,6 +127,11 @@ p
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.role-ceo a {
+    text-decoration: none;
+    
+}
+
 .role-ceo a span 
 {
     margin-top: 10px;
@@ -135,9 +140,9 @@ p
     font-weight: bold;
     color: #333;
     text-align: center;
-    word-wrap: break-word;
-    
+    word-wrap: break-word;  
 }
+
 
 .role-ceo:hover 
 {
