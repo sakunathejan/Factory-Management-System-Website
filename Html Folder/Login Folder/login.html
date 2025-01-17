@@ -20,14 +20,14 @@
                 </div>
                 <h2 class="heading">Welcome Back !</h2>
                 <p class="description">Log Into Your Account</p>
-                <form>
+                <form method="POST" class="login-form">
                     <div class="input-group">
                         <label for="user-id">User ID :</label>
-                        <input type="text" id="user-id" placeholder="Enter your User ID" />
+                        <input type="text" id="user-id" name="userId" placeholder="Enter your User ID" />
                     </div>
                     <div class="input-group">
                         <label for="password">Password :</label>
-                        <input type="password" id="password" placeholder="Enter your password" />
+                        <input type="password" id="password" name="password" placeholder="Enter your password" />
                     </div>
                     <div class="actions">
                         <a href="/Html Folder/forgotPassword.html" class="forgot-password">Forgot Password?</a>
@@ -41,6 +41,14 @@
                     </div>
                     <button type="submit" class="login-button">LOGIN</button>
                 </form>
+                <!-- Popup box (hidden initially) -->
+                <div id="popup" class="popup hidden">
+                    <div class="popup-content">
+                      <span id="popup-message"></span>
+                      <button id="popup-close">OK</button>
+                    </div>
+                  </div>
+                  
             </div>
             <div class="image-section">
                 <img src="/Company Logo/Images for the Web/wash_hands.jpg" alt="Person washing hands under a faucet" />
@@ -51,7 +59,8 @@
     <footer class="footer">
         <p>&copy; Sakuraa Product Soap Company 2023</p>
     </footer>
-    
+    <script src="/JavaScript Folder/Login/login.js"></script>
+
 </body>
 
 </html>
